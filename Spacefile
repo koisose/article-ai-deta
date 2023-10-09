@@ -5,4 +5,29 @@ micros:
     src: ./packages/nextjs
     engine: next
     primary: true
+    public: true
     dev: yarn start
+    presets:
+      env:
+        - name: AUTH0_SECRET
+          description: AUTH0_SECRET
+        - name: AUTH0_BASE_URL
+          description: AUTH0_BASE_URL
+        - name: AUTH0_ISSUER_BASE_URL
+          description: AUTH0_ISSUER_BASE_URL
+        - name: AUTH0_CLIENT_ID
+          description: AUTH0_CLIENT_ID
+        - name: AUTH0_CLIENT_SECRET
+          description: AUTH0_CLIENT_SECRET
+  - name: ai
+    src: ./packages/python-app
+    engine: python3.9
+    run: uvicorn main:app
+    public_routes:
+      - "/predict"
+      - "/generate"
+    dev: .venv/bin/uvicorn main:app --reload
+    presets:
+      env:
+        - name: STABILITY_KEY
+          description: STABILITY_KEY

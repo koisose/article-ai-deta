@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+requests
+python-dotenv
+google-cloud-aiplatform >= 1.31.0
+google-cloud-logging
+vertexai
+deta

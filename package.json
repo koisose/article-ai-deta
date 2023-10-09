@@ -16,7 +16,8 @@
     "prepare": "install-self-peers -- --ignore-scripts",
     "start": "yarn workspace @se-2/nextjs dev",
     "vercel": "yarn workspace @se-2/nextjs vercel",
-    "vercel:yolo": "yarn workspace @se-2/nextjs vercel:yolo"
+    "vercel:yolo": "yarn workspace @se-2/nextjs vercel:yolo",
+    "build": "yarn workspace @se-2/nextjs build"
   },
   "resolutions": {
     "usehooks-ts@^2.7.2": "patch:usehooks-ts@npm:^2.7.2#./.yarn/patches/usehooks-ts-npm-2.7.2-fceffe0e43.patch"
